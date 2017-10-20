@@ -1,0 +1,11 @@
+{
+  "name": "assetmanager",
+  "version": "1.0.0",
+  "description": "Asset loader and manager for game development",
+  "main": "src/assetmanager.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Nicholson <fatnic388@gmail.com>",
+  "license": "ISC"
+}
