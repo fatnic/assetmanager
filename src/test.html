@@ -10,12 +10,15 @@
   <script>
     let AM = new AssetManager()
     AM.add('./sprite.jpg')
+    AM.add('./test.json')
     AM.downloadAll(crabs)
 
     function crabs() {
       let cvs = document.getElementById('canvas')
       let ctx = cvs.getContext('2d');
       ctx.drawImage(AM.get("./sprite.jpg"), 0, 0)
+
+      console.log(AM.get('./test.json'))
     }
 
   </script>

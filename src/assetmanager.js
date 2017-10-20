@@ -64,7 +64,16 @@ class AssetManager {
     this._cache[path] = img
   } 
 
-  _loadJSON(path, callback) {
+  async _loadJSON(path, callback) {
+
+    await fetch(path).then(res => res.json()).then(data => {
+      this._cache[path] = data
+      this._successCount++
+    }).catch(err => {
+      this._errorCount++
+    }).then(() => {
+      if (this._isDone()) { callback() }
+    })
 
   }
 
